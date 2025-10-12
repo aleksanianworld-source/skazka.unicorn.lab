@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pro.Apparaty - Продажа Премиального Бизнеса</title>
+    <title>Pro.Apparaty-Готовый бизнес</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -45,7 +45,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: visible;
+            overflow: hidden;
+            padding-bottom: 4rem;
+            z-index: 2;
         }
 
         .hero::before {
@@ -134,6 +136,13 @@
             font-weight: 800;
             color: var(--primary-gold);
             white-space: nowrap;
+            text-decoration: none;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-logo:hover {
+            opacity: 0.8;
         }
 
         .nav-menu {
@@ -218,6 +227,8 @@
         /* Business Overview */
         .business-overview {
             background: var(--card-bg);
+            position: relative;
+            z-index: 1;
         }
 
         .overview-grid {
@@ -225,6 +236,15 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
+        }
+
+        /* Центрируем 4-ю карточку на широких экранах (когда она одна в ряду) */
+        @media (min-width: 992px) {
+            .overview-card:nth-child(4):last-child {
+                grid-column: 1 / -1;
+                max-width: 400px;
+                margin: 0 auto;
+            }
         }
 
         .overview-card {
@@ -372,13 +392,16 @@
         }
 
         .social-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
             gap: 2rem;
             margin-top: 3rem;
+            justify-content: center;
         }
 
         .social-card {
+            flex: 0 1 calc(20% - 1.6rem);
+            min-width: 200px;
             background: rgba(26, 26, 26, 0.6);
             /* Fallback для backdrop-filter */
             -webkit-backdrop-filter: blur(10px);
@@ -388,6 +411,30 @@
             text-align: center;
             border: 1px solid rgba(212, 175, 55, 0.2);
             transition: all 0.3s ease;
+        }
+
+        @media (max-width: 1400px) {
+            .social-card {
+                flex: 0 1 calc(25% - 1.5rem);
+            }
+        }
+
+        @media (max-width: 1100px) {
+            .social-card {
+                flex: 0 1 calc(33.333% - 1.4rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .social-card {
+                flex: 0 1 calc(50% - 1rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .social-card {
+                flex: 0 1 100%;
+            }
         }
 
         .social-card:hover {
@@ -650,13 +697,60 @@
                 transition: all 0.8s ease; /* Легкая задержка для плавности на iPad */
             }
         }
+
+        /* Кнопка "Вверх" */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-gold);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--dark-bg);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+        }
+
+        .scroll-to-top:active {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .scroll-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
-            <div class="nav-logo">Pro.Apparaty</div>
+            <a href="#" class="nav-logo" id="logo-link">Pro.Apparaty</a>
             <ul class="nav-menu">
                 <li><a href="#overview" class="nav-link">О бизнесе</a></li>
                 <li><a href="#financial" class="nav-link">Финансы</a></li>
@@ -680,7 +774,7 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-badge">
-                <i class="fas fa-crown"></i> Премиальный Бизнес на Продажу
+                <i class="fas fa-crown"></i> Готовый прибыльный бизнес
             </div>
             <h1 class="hero-title">Pro.Apparaty</h1>
             <p class="hero-subtitle">
@@ -722,7 +816,7 @@
                 </div>
                 <h3 class="overview-title">Автоматизация</h3>
                 <p class="overview-text">
-                    Полностью настроенная AmoCRM с частичной автоматизацией на базе ИИ в процессах продаж. 
+                    Настроенная AmoCRM с частичной автоматизацией на базе ИИ в процессах продаж. 
                     Система уведомлений, интеграции с популярными сервисами. Воронка: Заявка → Консультация → 
                     Подбор оборудования → Договор → Отгрузка и Обучение.
                 </p>
@@ -763,7 +857,7 @@
                 <span class="financial-number">9.6M ₽</span>
                 <div class="financial-label">Чистая прибыль</div>
                 <p class="financial-description">
-                    После всех расходов и налогов
+                    После всех расходов
                 </p>
             </div>
             <div class="financial-card animate-on-scroll">
@@ -777,7 +871,7 @@
                 <span class="financial-number">18.84%</span>
                 <div class="financial-label">Рентабельность</div>
                 <p class="financial-description">
-                    По чистой прибыли (исключая НДС)
+                    По чистой прибыли
                 </p>
             </div>
             <div class="financial-card animate-on-scroll">
@@ -811,9 +905,9 @@
             <div class="market-text animate-on-scroll">
                 <p>
                     <strong>Обзор рынка:</strong> Pro.Apparaty занимает устойчивую позицию на растущем рынке косметологических услуг. 
-                    Рынок аппаратной косметологии в РФ демонстрирует устойчивый рост. Ключевые тренды: высокий спрос на немедицинские 
-                    процедуры (лазерная эпиляция, коррекция фигуры), децентрализация услуг (рост числа частных мастеров и небольших 
-                    кабинетов), спрос на многофункциональные аппараты.
+                    Рынок аппаратной косметологии в РФ демонстрирует устойчивый рост: с 15 млрд руб. в 2023 году до 22 млрд руб. 
+                    в 2024 году (+47%). Ключевые тренды: высокий спрос на немедицинские процедуры (лазерная эпиляция, коррекция фигуры), 
+                    децентрализация услуг (рост числа частных мастеров и небольших кабинетов), спрос на многофункциональные аппараты.
                 </p>
                 <br>
                 <p>
@@ -822,9 +916,11 @@
                 </p>
                 <br>
                 <p>
-                    <strong>Уникальное Торговое Предложение (УТП):</strong> 1. Лицензированном обучении (с выдачей удостоверения гос. 
-                    образца). 2. Собственном сервисном центре и техподдержке. 3. Маркетинговом сопровождении и помощи в запуске бизнеса 
-                    для клиента. 4. Гибких финансовых условиях (кредит, рассрочка) и бесплатной доставке по РФ.
+                    <strong>Уникальное Торговое Предложение (УТП):</strong><br>
+                    1. Лицензированное обучение с выдачей удостоверения гос. образца.<br>
+                    2. Сервисное обслуживание и техподдержка по всей России.<br>
+                    3. Маркетинговое сопровождение и помощь в запуске бизнеса для клиента.<br>
+                    4. Гибкие финансовые условия (кредит, рассрочка) и бесплатная доставка по РФ.
                 </p>
             </div>
             <div class="market-highlights animate-on-scroll">
@@ -866,6 +962,50 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Market Growth Statistics -->
+        <div style="margin-top: 4rem;">
+            <h3 class="animate-on-scroll" style="font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; text-align: center; margin-bottom: 2rem; color: var(--primary-gold);">
+                Динамика рынка по сегментам (2023-2024)
+            </h3>
+            <div class="financial-grid">
+                <div class="financial-card animate-on-scroll">
+                    <span class="financial-number">+35%</span>
+                    <div class="financial-label">Диодные лазеры для эпиляции</div>
+                    <p class="financial-description">
+                        Рост с 4.8 до 6.5 млрд руб.
+                    </p>
+                </div>
+                <div class="financial-card animate-on-scroll">
+                    <span class="financial-number">+66%</span>
+                    <div class="financial-label">Аппараты RF-лифтинга</div>
+                    <p class="financial-description">
+                        Рост с 3.5 до 5.8 млрд руб.
+                    </p>
+                </div>
+                <div class="financial-card animate-on-scroll">
+                    <span class="financial-number">+45%</span>
+                    <div class="financial-label">Многофункциональные платформы</div>
+                    <p class="financial-description">
+                        Рост с 2.9 до 4.2 млрд руб.
+                    </p>
+                </div>
+                <div class="financial-card animate-on-scroll">
+                    <span class="financial-number">+45%</span>
+                    <div class="financial-label">Прочее оборудование</div>
+                    <p class="financial-description">
+                        SMAS, криополиз, IPL: 3.8 до 5.5 млрд руб.
+                    </p>
+                </div>
+                <div class="financial-card animate-on-scroll" style="grid-column: 1 / -1; max-width: 400px; margin: 0 auto;">
+                    <span class="financial-number" style="color: var(--primary-gold);">+47%</span>
+                    <div class="financial-label" style="font-size: 1.2rem; font-weight: 700;">Общий рост рынка</div>
+                    <p class="financial-description">
+                        С 15.0 до 22.0 млрд руб. за год
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Marketing & Sales -->
@@ -876,16 +1016,16 @@
                 <h3 style="color: var(--primary-gold); margin-bottom: 1rem;">Каналы привлечения клиентов</h3>
                 <p>
                     <strong>Структура каналов:</strong> Сайт имеет оптимизированный каталог (SEO-трафик). 
-                    Также активно используются (SEO, Соцсети, Рекомендации, партнеры).
+                    Также активно используются (Авито,Соцсети, Рекомендации, партнеры).
                 </p>
                 <br>
                 <p>
-                    <strong>CAC (стоимость привлечения клиента):</strong> 6,050₽ средняя стоимость 1 продажи.
+                    <strong>CAC (стоимость привлечения клиента):</strong> 6,050₽ средняя стоимость 1 клиента.
                 </p>
                 <br>
                 <p>
                     <strong>Воронка продаж:</strong> Используется AmoCRM. Продажи частично автоматизированы с помощью ИИ 
-                    (из исходных данных). Видимая воронка: Заявка → Консультация → Подбор оборудования и условия оплаты → 
+                    . Этапы воронки: Заявка → Консультация → Подбор оборудования и условия оплаты → 
                     Договор → Отгрузка и Обучение.
                 </p>
             </div>
@@ -904,7 +1044,7 @@
                         <i class="fas fa-thumbs-up"></i>
                     </div>
                     <div>
-                        <strong>Соцсети</strong><br>
+                        <strong>Соцсети + Авито</strong><br>
                         14,000+ подписчиков
                     </div>
                 </div>
@@ -971,7 +1111,7 @@
                 <h3 class="overview-title">Гибкие условия</h3>
                 <p class="overview-text">
                     Работа с ведущими производителями в Китае (6 лет сотрудничества). Доверительные отношения 
-                    позволяют заказывать на предоплате и продавать оборудование под реализацию.
+                    позволяют заказывать по предоплате и продавать оборудование под реализацию.
                 </p>
             </div>
         </div>
@@ -1003,7 +1143,7 @@
                     </div>
                     <div>
                         <strong>12,632 контакта</strong><br>
-                        Качественная база в CRM
+                        Наработанная база в CRM
                     </div>
                 </div>
                 <div class="market-item">
@@ -1069,10 +1209,6 @@
                 <span class="social-number">222</span>
                 <span class="social-label">Авито подписчиков</span>
             </div>
-            <div class="social-card animate-on-scroll">
-                <span class="social-number">2Гис</span>
-                <span class="social-label">Присутствие в 2Гис</span>
-            </div>
         </div>
     </section>
 
@@ -1117,7 +1253,6 @@
                 </div>
                 <h3 class="overview-title">Обучение</h3>
                 <p class="overview-text">
-                    Лицензия на образовательную деятельность (№ Л035-01268-47/00219635). 
                     Онлайн-обучение клиентов работе с оборудованием. Образовательные программы для мастеров.
                 </p>
             </div>
@@ -1144,7 +1279,7 @@
                 </div>
                 <h3 class="overview-title">Цифровые активы</h3>
                 <p class="overview-text">
-                    Сайт с SEO-трафиком, Instagram (11.4K), VK (757), Telegram (1,502 + 240 VIP). 
+                    Товарный знак, Сайт с SEO-трафиком, Instagram (11.4K), VK (757), Telegram (1,502 + 240 VIP). 
                     Настроенная AmoCRM с частичной автоматизацией на базе ИИ.
                 </p>
             </div>
@@ -1165,7 +1300,7 @@
                 <h3 class="overview-title">Партнерские связи</h3>
                 <p class="overview-text">
                     3 действующих партнера по продажам. Налаженные доверительные отношения 
-                    с производителями в Китае (6 лет сотрудничества). Доступ к инвесторскому капиталу.
+                    с производителями в Китае (6 лет сотрудничества). Доступ к инвесторскому капиталу согласовывается дополнительно.
                 </p>
             </div>
         </div>
@@ -1239,12 +1374,6 @@
                 </p>
                 <br>
                 <p>
-                    <strong>Регуляторные риски:</strong> Ужесточение требований к сертификации оборудования (риск 
-                    обязательного получения РУ или требования мед. лицензии и покупателя) (Стратегия: Мониторинг 
-                    законодательства).
-                </p>
-                <br>
-                <p>
                     <strong>Зависимость от собственника:</strong> Операционные процессы продажи и закупки завязаны 
                     на владельце (Стратегия: Предложение о сопровождении и сохранении доли 10-20% снижает этот риск).
                 </p>
@@ -1298,19 +1427,19 @@
                 Готовый к работе бизнес с налаженными процессами, клиентской базой и автоматизацией. 
                 Продажа 80-100% бизнеса с возможностью сопровождения владельца (10-20% доли). 
                 <br><br>
-                <strong>Причина продажи:</strong> Переезд владельца в Латинскую Америку для запуска нового бизнеса.
+                <strong>Причина продажи:</strong> Переезд собственника в Латинскую Америку, открытие нового бизнеса и невозможность дальнейшего операционного управления.
                 <br><br>
-                <strong>Юридическая структура:</strong> ИП Алексанян Давид Ашотович, ИНН 262805262207, ОГРНИП 319265100138239 (с 2019 г.), УСН 6%.
+                <strong>Юридическая структура:</strong> Индивидуальный предприниматель.
                 <br><br>
                 <strong>Стоимость бизнеса:</strong> По договоренности. Эта инвестиция даст вам контроль над прибыльным бизнесом 
                 с потенциалом масштабирования и выхода на новые рынки.
             </p>
-            <a href="mailto:invest@pro-apparaty.ru?subject=Интерес%20к%20покупке%20бизнеса%20Pro.Apparaty&body=Здравствуйте!%0A%0AМеня%20заинтересовало%20ваше%20предложение%20по%20продаже%20бизнеса%20Pro.Apparaty.%0A%0AПрошу%20связаться%20со%20мной%20для%20обсуждения%20деталей.%0A%0AС%20уважением," class="cta-button animate-on-scroll">
-                <i class="fas fa-handshake"></i> Обсудить покупку
+            <a href="https://t.me/david_aleksanian" target="_blank" class="cta-button animate-on-scroll">
+                <i class="fab fa-telegram"></i> Обсудить покупку
             </a>
             <div style="margin-top: 2rem; text-align: center;">
                 <p style="color: var(--text-secondary);">
-                    <i class="fas fa-envelope"></i> Email: invest@pro-apparaty.ru<br>
+                    <i class="fab fa-telegram"></i> Telegram: <a href="https://t.me/david_aleksanian" target="_blank" style="color: var(--primary-gold);">@david_aleksanian</a><br>
                     <i class="fas fa-globe"></i> Сайт: <a href="https://pro-apparaty.ru" target="_blank" style="color: var(--primary-gold);">pro-apparaty.ru</a>
                 </p>
             </div>
@@ -1339,12 +1468,20 @@
                 <a href="https://go.2gis.com/wkCQr" class="footer-link" target="_blank">
                     <i class="fas fa-map-marked-alt"></i> 2Гис
                 </a>
+                <a href="https://yandex.com/maps/-/CLRefS5M" class="footer-link" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> Яндекс.Карты
+                </a>
             </div>
             <p class="footer-text">
-                © 2024 Pro.Apparaty. Все права защищены. Конфиденциальная информация для потенциальных инвесторов.
+                © 2025 Pro.Apparaty. Все права защищены. Конфиденциальная информация для потенциальных инвесторов.
             </p>
         </div>
     </footer>
+
+    <!-- Кнопка "Вверх" -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Наверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script>
         /* Polyfills & helpers for older mobile browsers */
@@ -1388,6 +1525,38 @@
                     }
                 });
 
+                // --- Клик по логотипу - скролл наверх ---
+                var logoLink = document.getElementById('logo-link');
+                if (logoLink) {
+                    logoLink.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    });
+                }
+
+                // --- Кнопка "Вверх" ---
+                var scrollToTopBtn = document.getElementById('scrollToTop');
+                
+                // Показываем/скрываем кнопку при скролле
+                function toggleScrollButton() {
+                    if (window.scrollY > 300) {
+                        scrollToTopBtn.classList.add('visible');
+                    } else {
+                        scrollToTopBtn.classList.remove('visible');
+                    }
+                }
+
+                // Обработчик клика по кнопке "Вверх"
+                scrollToTopBtn.addEventListener('click', function () {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+
                 // --- Функция debounce для оптимизации событий скролла ---
                 function debounce(func, wait) {
                     var timeout;
@@ -1403,7 +1572,7 @@
                     };
                 }
 
-                // --- Изменение фона навбара при скролле ---
+                // --- Изменение фона навбара и кнопки "Вверх" при скролле ---
                 window.addEventListener('scroll', debounce(function () {
                     var nav = document.querySelector('.nav');
                     if (window.scrollY > 100) {
@@ -1411,6 +1580,8 @@
                     } else {
                         nav.style.background = 'rgba(10, 10, 10, 0.95)';
                     }
+                    // Показываем/скрываем кнопку "Вверх"
+                    toggleScrollButton();
                 }, 250));
 
                 // --- Scroll-анимации (IntersectionObserver с фолбеком) ---
@@ -1468,15 +1639,14 @@
                     }
                 }
 
-                // --- Параллакс-эффект для Hero ---
-                var hero = document.querySelector('.hero');
-                // Проверяем, является ли устройство мобильным или iPad
-                if (hero && !/iPad|iPhone|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                    window.addEventListener('scroll', function () {
-                        var scrolled = window.pageYOffset;
-                        hero.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
-                    });
-                }
+                // --- Параллакс-эффект для Hero отключен для избежания наложения секций ---
+                // var hero = document.querySelector('.hero');
+                // if (hero && !/iPad|iPhone|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                //     window.addEventListener('scroll', function () {
+                //         var scrolled = window.pageYOffset;
+                //         hero.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
+                //     });
+                // }
 
                 // --- Hover-эффекты для карточек ---
                 var cards = document.querySelectorAll('.overview-card, .financial-card, .social-card');
@@ -1594,6 +1764,9 @@
                         imageObserver.observe(lazyImgs[li]);
                     }
                 }
+
+                // --- Начальная проверка позиции скролла для кнопки "Вверх" ---
+                toggleScrollButton();
             } catch (e) {
                 console.error("Error during script execution:", e);
             }
@@ -1601,4 +1774,3 @@
     </script>
 </body>
 </html>
-
