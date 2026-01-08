@@ -228,14 +228,14 @@
             display: flex !important;
             flex-direction: column;
             justify-content: center !important;
-            align-items: flex-start !important;
+            align-items: center !important;
             width: 100%;
             height: 100%;
-            text-align: left !important;
+            text-align: center !important;
         }
 
         .hero * {
-            text-align: left !important;
+            text-align: center !important;
         }
 
         .hero-badge {
@@ -785,817 +785,467 @@
             
             <!-- Slide 1: Title -->
             <section class="hero">
-                <div class="hero-badge">Investor Pitch · Unicorn Lab</div>
-                <h1>Skazka.ai</h1>
-                <p class="subtitle">
-                    AI-платформа персонализированных детских книг. Доказанная юнит-экономика: 
-                    ROI <strong class="success">1.65x</strong>, выручка <strong>$4,000</strong> за 3 недели.
-                </p>
-                <p class="meta">Давид, 31 год, Буэнос-Айрес · Январь 2026</p>
+                <div style="position: absolute; top: 50px; left: 50%; transform: translateX(-50%);">
+                    <div class="hero-badge" style="font-size: 11px; padding: 6px 18px; opacity: 0.7;">PITCH FACTORY · UNICORN LAB</div>
+                </div>
+                
+                <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%;">
+                    <h1 style="font-size: clamp(80px, 10vw, 120px); margin: 0; font-weight: 900; letter-spacing: -2px;">Skazka.ai</h1>
+                    <div style="width: 120px; height: 2px; background: var(--gradient-gold); margin: 50px 0;"></div>
+                    <p style="font-size: clamp(20px, 2.2vw, 26px); color: var(--text-secondary); font-weight: 300; letter-spacing: 0.5px; margin: 0;">
+                        Сервис автоматической генерации<br>персонализированных сказок в 1 клик
+                    </p>
+                </div>
+                
+                <div style="position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%); display: flex; gap: 40px; align-items: center;">
+                    <div style="text-align: right; border-right: 1px solid rgba(212, 175, 55, 0.3); padding-right: 40px;">
+                        <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--primary-gold); font-weight: 600; margin: 0 0 4px 0;">Давид Алексанян</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">Фаундер</p>
+                    </div>
+                    <div style="text-align: left;">
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">31 год</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">Буэнос-Айрес, Аргентина</p>
+                    </div>
+                </div>
             </section>
 
             <!-- Slide 2: Цель компании -->
-            <section>
-                <h2>Цель компании</h2>
-                <div class="stat-large" style="margin: 30px 0;">
-                    <p style="font-size: clamp(24px, 3vw, 32px); color: var(--text-primary); font-weight: 700; line-height: 1.3; text-align: center;">
-                        Стать №1 AI-платформой персонализированных детских книг в мире
-                    </p>
-                </div>
-                <div class="two-col" style="margin-top: 30px;">
-                    <div class="col" style="text-align: center;">
-                        <h3 style="text-align: center; margin-bottom: 24px;">К 2030 году</h3>
-                        <div style="margin-bottom: 16px;">
-                            <div style="font-size: clamp(32px, 3.5vw, 44px); font-weight: 900; color: var(--primary-gold); margin-bottom: 6px;">10M+</div>
-                            <p style="font-size: clamp(14px, 1.5vw, 16px);">семей используют Skazka.ai</p>
-                        </div>
-                        <div style="margin-bottom: 16px;">
-                            <div style="font-size: clamp(32px, 3.5vw, 44px); font-weight: 900; color: var(--primary-gold); margin-bottom: 6px;">50+</div>
-                            <p style="font-size: clamp(14px, 1.5vw, 16px);">стран</p>
-                        </div>
-                        <div>
-                            <div style="font-size: clamp(32px, 3.5vw, 44px); font-weight: 900; color: var(--primary-gold); margin-bottom: 6px;">$100M+</div>
-                            <p style="font-size: clamp(14px, 1.5vw, 16px);">Annual Recurring Revenue</p>
-                        </div>
+            <section style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 60px;">Цель компании</p>
+                
+                <h2 style="font-size: clamp(32px, 4vw, 48px); font-weight: 700; line-height: 1.3; max-width: 900px; margin: 0 auto 80px;">
+                    Стать №1 AI-платформой персонализированных детских книг в мире
+                </h2>
+                
+                <p style="font-size: clamp(15px, 1.6vw, 18px); color: var(--text-secondary); margin-bottom: 50px; letter-spacing: 1px;">К 2030 ГОДУ</p>
+                
+                <div style="display: flex; gap: 80px; margin-bottom: 80px;">
+                    <div>
+                        <div style="font-size: clamp(48px, 6vw, 72px); font-weight: 900; color: var(--primary-gold); line-height: 1; margin-bottom: 12px;">10M+</div>
+                        <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary); margin: 0;">семей</p>
                     </div>
-                    <div class="col" style="display: flex; align-items: center; justify-content: center;">
-                        <div style="padding: 32px; background: rgba(212, 175, 55, 0.1); border-radius: 12px; border: 2px solid var(--primary-gold);">
-                            <p style="font-size: clamp(18px, 2.2vw, 24px); font-weight: 700; color: var(--text-primary); line-height: 1.4; text-align: center;">
-                                Миссия:<br>
-                                <span style="color: var(--primary-gold);">Сделать каждого ребенка главным героем своей истории</span>
-                            </p>
-                        </div>
+                    <div>
+                        <div style="font-size: clamp(48px, 6vw, 72px); font-weight: 900; color: var(--primary-gold); line-height: 1; margin-bottom: 12px;">50+</div>
+                        <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary); margin: 0;">стран</p>
+                    </div>
+                    <div>
+                        <div style="font-size: clamp(48px, 6vw, 72px); font-weight: 900; color: var(--primary-gold); line-height: 1; margin-bottom: 12px;">$100M+</div>
+                        <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary); margin: 0;">ARR</p>
                     </div>
                 </div>
-            </section>
-
-            <!-- Slide 3: Проблема -->
-            <section>
-                <h2>Проблема</h2>
-                <div class="quote">
-                    <p>Каждый родитель мечтает подарить ребёнку книгу, где ОН — главный герой</p>
-                </div>
-                <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--text-primary); margin: 30px 0 20px; text-align: center;">
-                    Но на рынке две крайности:
+                
+                <div style="width: 100px; height: 1px; background: var(--gradient-gold); margin-bottom: 30px;"></div>
+                
+                <p style="font-size: clamp(18px, 2vw, 22px); color: var(--text-primary); font-weight: 300; max-width: 700px; line-height: 1.6;">
+                    Миссия: <span style="color: var(--primary-gold); font-weight: 500;">Сделать каждого ребёнка главным героем своей истории</span>
                 </p>
-                <div class="comparison">
-                    <div class="comparison-item">
-                        <h3>"Шаблонный масс-маркет"</h3>
-                        <p style="font-size: clamp(13px, 1.4vw, 15px); margin-bottom: 16px;">(фотокниги WB/Ozon)</p>
-                        <ul>
-                            <li>Стандартные шаблоны без настоящей персонализации</li>
-                            <li>Ребёнок не узнаёт себя в иллюстрациях</li>
-                            <li>Нет эмоциональной связи</li>
-                            <li>Цена: 1,500-3,000₽</li>
-                        </ul>
-                    </div>
-                    <div class="comparison-item">
-                        <h3>"Ручная работа художника"</h3>
-                        <p style="font-size: clamp(13px, 1.4vw, 15px); margin-bottom: 16px;">(Overprice)</p>
-                        <ul>
-                            <li>Уникальная книга, но дорого</li>
-                            <li>От 10,000₽</li>
-                            <li>Ожидание 2-3 недели</li>
-                            <li>Доступно не всем семьям</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="highlight" style="margin-top: 30px;">
-                    <p style="text-align: center;"><strong>РЕЗУЛЬТАТ: 90% родителей отказываются от мечты</strong><br>Или покупают шаблон и разочаровываются</p>
-                </div>
             </section>
 
-            <!-- Slide 4: Решение -->
-            <section>
-                <h2>Решение — Skazka.ai</h2>
-                <p style="font-size: clamp(18px, 2.2vw, 24px); color: var(--text-primary); margin-bottom: 30px; line-height: 1.4; text-align: center;">
-                    AI-платформа для создания персонализированных детских книг с ГЛУБОКОЙ персонализацией
+            <!-- Slide 3: Проблема + Решение -->
+            <section style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                <p style="font-size: clamp(24px, 3vw, 32px); color: var(--text-primary); font-weight: 300; line-height: 1.4; max-width: 800px; margin-bottom: 50px;">
+                    Каждый родитель мечтает подарить ребёнку книгу,<br>где <span style="color: var(--primary-gold); font-weight: 600;">ОН — главный герой</span>
                 </p>
-                <h3 style="text-align: center; margin-bottom: 24px;">Что получает клиент:</h3>
-                <ul style="font-size: clamp(14px, 1.6vw, 17px); line-height: 1.8; max-width: 800px; margin: 0 auto 30px;">
-                    <li><strong>Качество ручной работы</strong> по цене масс-маркета</li>
-                    <li><strong>Готово за 5 минут</strong> (не за 2-3 недели)</li>
-                    <li><strong>Цена: 990-3,990₽</strong> (vs 10,000₽+ у художника)</li>
-                    <li><strong>Ребёнок УЗНАЁТ себя</strong> на каждой странице</li>
-                </ul>
-            </section>
-
-            <!-- Slide 5: Как работает -->
-            <section>
-                <h2>Как работает</h2>
-                <div class="numbered-list">
-                    <li>
-                        <strong>Шаг 1: Родитель загружает</strong>
-                        <p>Фото ребёнка, имя, возраст (2-10 лет), интересы (динозавры, космос, принцессы)</p>
-                    </li>
-                    <li>
-                        <strong>Шаг 2: AI создаёт за 5 минут</strong>
-                        <p>Уникальный сюжет с учётом интересов, 16 или 23 иллюстрации, ребёнок превращается в героя сказки, текст адаптирован под возраст</p>
-                    </li>
-                    <li>
-                        <strong>Шаг 3: Результат</strong>
-                        <p>Ребёнок УЗНАЁТ себя на каждой странице, просит читать снова и снова, книга становится любимой → Высокий LTV через повторные покупки</p>
-                    </li>
-                </div>
-            </section>
-
-            <!-- Slide 6: Воронка продукта -->
-            <section>
-                <h2>Воронка продукта</h2>
-                <div class="numbered-list">
-                    <li>
-                        <strong>Бесплатное превью (Hook)</strong>
-                        <p>Видит 3 страницы бесплатно · Конверсия в покупку: <strong class="success">7.9% ✓</strong></p>
-                    </li>
-                    <li>
-                        <strong>Digital версия (990₽ / ~$12)</strong>
-                        <p>Маржинальность: <strong class="success">92%</strong> · Email + личный кабинет</p>
-                    </li>
-                    <li>
-                        <strong>Print версия (3,990₽ / ~$50)</strong>
-                        <p>Маржинальность: <strong class="success">65%</strong> · Доставка 5-7 дней</p>
-                    </li>
-                    <li>
-                        <strong>Повторные покупки (~21%)</strong>
-                        <p>Новые истории · Подарки друзьям · Upgrade Digital → Print</p>
-                    </li>
-                </div>
-            </section>
-
-            <!-- Slide 7: В разработке -->
-            <section>
-                <h2>В разработке (2026)</h2>
-                <div class="two-col">
-                    <div class="col">
-                        <h3>Аудио-книги</h3>
-                        <ul>
-                            <li>Стандартная озвучка + голосом <strong class="gold">родителей/бабушек/дедушек</strong></li>
-                            <li>(памятный подарок!)</li>
-                            <li><strong>+990₽</strong> к среднему чеку</li>
-                        </ul>
+                
+                <div style="display: flex; gap: 40px; justify-content: center; margin-bottom: 40px; max-width: 1000px;">
+                    <div style="flex: 1; padding: 24px; background: rgba(255, 255, 255, 0.02); border-radius: 12px;">
+                        <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--text-primary); font-weight: 600; margin-bottom: 12px;">❌ Масс-маркет</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); line-height: 1.6; margin: 0;">Шаблоны · Нет персонализации · 1,500-3,000₽</p>
                     </div>
-                    <div class="col">
-                        <h3>Видео-сказки</h3>
-                        <ul>
-                            <li>Анимация иллюстраций</li>
-                            <li><strong>+1,990₽</strong> к среднему чеку</li>
-                        </ul>
+                    <div style="flex: 1; padding: 24px; background: rgba(255, 255, 255, 0.02); border-radius: 12px;">
+                        <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--text-primary); font-weight: 600; margin-bottom: 12px;">❌ Художник</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); line-height: 1.6; margin: 0;">Уникально, но дорого · От 10,000₽ · 2-3 недели</p>
                     </div>
                 </div>
-                <div class="highlight" style="margin-top: 40px;">
-                    <p style="text-align: center;"><strong>Прогноз роста среднего чека:</strong><br>
-                    2025: 1,341₽ (факт) → 2026: 2,000₽ → 2,500₽ → 2027: 3,500₽+</p>
+                
+                <p style="font-size: clamp(15px, 1.6vw, 18px); color: var(--text-secondary); margin-bottom: 60px;">→ 90% родителей отказываются от мечты</p>
+                
+                <div style="width: 100px; height: 2px; background: var(--gradient-gold); margin-bottom: 50px;"></div>
+                
+                <p style="font-size: clamp(20px, 2.2vw, 26px); color: var(--primary-gold); font-weight: 600; margin-bottom: 30px; letter-spacing: 0.5px;">РЕШЕНИЕ</p>
+                
+                <p style="font-size: clamp(18px, 2vw, 22px); color: var(--text-primary); font-weight: 300; margin-bottom: 40px; max-width: 700px; line-height: 1.5;">
+                    AI-платформа с глубокой персонализацией
+                </p>
+                
+                <div style="display: flex; gap: 50px; justify-content: center; flex-wrap: wrap;">
+                    <div style="text-align: center;">
+                        <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--success-green); font-weight: 600; margin-bottom: 8px;">✓ Качество ручной работы</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">по цене масс-маркета</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--success-green); font-weight: 600; margin-bottom: 8px;">✓ За 5 минут</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">не за 2-3 недели</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--success-green); font-weight: 600; margin-bottom: 8px;">✓ 990-3,990₽</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">vs 10,000₽+ у художника</p>
+                    </div>
                 </div>
             </section>
 
-            <!-- Slide 8: Целевой клиент -->
-            <section>
-                <h2>Целевой клиент</h2>
-                <div class="two-col">
-                    <div class="col">
-                        <h3>PRIMARY (Основная аудитория по данным)</h3>
-                        <p style="font-size: clamp(17px, 2vw, 22px); font-weight: 700; color: var(--primary-gold); margin: 20px 0;">
-                            Бабушки 50-65 лет — основная покупательская аудитория!
+            <!-- Slide 4: Продукт -->
+            <section style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 50px;">Продукт</p>
+                
+                <div style="display: flex; gap: 30px; justify-content: center; margin-bottom: 60px; max-width: 1100px;">
+                    <div style="flex: 1; text-align: left; padding: 24px; background: rgba(255, 255, 255, 0.02); border-radius: 12px;">
+                        <p style="font-size: clamp(24px, 2.5vw, 28px); color: var(--primary-gold); font-weight: 700; margin-bottom: 16px;">1</p>
+                        <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary); line-height: 1.6; margin: 0;">Родитель загружает фото, имя, возраст, интересы</p>
+                    </div>
+                    <div style="flex: 1; text-align: left; padding: 24px; background: rgba(255, 255, 255, 0.02); border-radius: 12px;">
+                        <p style="font-size: clamp(24px, 2.5vw, 28px); color: var(--primary-gold); font-weight: 700; margin-bottom: 16px;">2</p>
+                        <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary); line-height: 1.6; margin: 0;">AI создаёт за 5 минут: сюжет + 16-23 иллюстрации</p>
+                    </div>
+                    <div style="flex: 1; text-align: left; padding: 24px; background: rgba(255, 255, 255, 0.02); border-radius: 12px;">
+                        <p style="font-size: clamp(24px, 2.5vw, 28px); color: var(--primary-gold); font-weight: 700; margin-bottom: 16px;">3</p>
+                        <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary); line-height: 1.6; margin: 0;">Ребёнок узнаёт себя → высокий LTV</p>
+                    </div>
+                </div>
+                
+                <div style="width: 100px; height: 1px; background: var(--gradient-gold); margin-bottom: 40px;"></div>
+                
+                <div style="display: flex; gap: 50px; justify-content: center; margin-bottom: 40px;">
+                    <div style="text-align: center;">
+                        <p style="font-size: clamp(36px, 4vw, 48px); font-weight: 900; color: var(--primary-gold); margin-bottom: 8px;">7.9%</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">Конверсия в покупку</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <p style="font-size: clamp(36px, 4vw, 48px); font-weight: 900; color: var(--success-green); margin-bottom: 8px;">92%</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">Маржа Digital (990₽)</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <p style="font-size: clamp(36px, 4vw, 48px); font-weight: 900; color: var(--success-green); margin-bottom: 8px;">65%</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">Маржа Print (3,990₽)</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <p style="font-size: clamp(36px, 4vw, 48px); font-weight: 900; color: var(--primary-gold); margin-bottom: 8px;">21%</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">Repeat Rate</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Traction -->
+            <section style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px;">Traction</p>
+                <p style="font-size: clamp(15px, 1.6vw, 18px); color: var(--text-secondary); margin-bottom: 60px;">Декабрь 2025 · 3 недели валидации</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-bottom: 60px; max-width: 1200px;">
+                    <div>
+                        <p style="font-size: clamp(48px, 6vw, 64px); font-weight: 900; color: var(--success-green); line-height: 1; margin-bottom: 12px;">1.65x</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">ROI</p>
+                    </div>
+                    <div>
+                        <p style="font-size: clamp(48px, 6vw, 64px); font-weight: 900; color: var(--primary-gold); line-height: 1; margin-bottom: 12px;">320K₽</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">Выручка</p>
+                    </div>
+                    <div>
+                        <p style="font-size: clamp(48px, 6vw, 64px); font-weight: 900; color: var(--primary-gold); line-height: 1; margin-bottom: 12px;">239</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">Клиентов</p>
+                    </div>
+                    <div>
+                        <p style="font-size: clamp(48px, 6vw, 64px); font-weight: 900; color: var(--success-green); line-height: 1; margin-bottom: 12px;">7.9%</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">Конверсия</p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 80px; justify-content: center; margin-bottom: 50px;">
+                    <div style="padding: 24px 40px; background: rgba(255, 255, 255, 0.02); border-radius: 12px;">
+                        <p style="font-size: clamp(32px, 4vw, 42px); font-weight: 900; color: var(--text-primary); margin-bottom: 8px;">984₽</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">CAC</p>
+                    </div>
+                    <div style="padding: 24px 40px; background: rgba(0, 200, 81, 0.1); border: 1px solid var(--success-green); border-radius: 12px;">
+                        <p style="font-size: clamp(32px, 4vw, 42px); font-weight: 900; color: var(--success-green); margin-bottom: 8px;">1,627₽</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">LTV</p>
+                    </div>
+                </div>
+                
+                <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--text-primary); font-weight: 300;">
+                    Прибыль с клиента: <span style="color: var(--success-green); font-weight: 600;">643₽</span> · Payback < 30 дней
+                </p>
+            </section>
+
+            <!-- Slide 6: Рынок + Целевой клиент -->
+            <section style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 50px;">Рынок & Целевой клиент</p>
+                
+                <div style="font-size: clamp(64px, 8vw, 96px); font-weight: 900; color: var(--primary-gold); line-height: 1; margin-bottom: 16px;">$2.5B</div>
+                <p style="font-size: clamp(15px, 1.6vw, 18px); color: var(--text-secondary); margin-bottom: 50px;">Total Addressable Market · CAGR 7-9%</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-bottom: 60px; max-width: 1200px;">
+                    <div style="text-align: center;">
+                        <p style="font-size: clamp(32px, 4vw, 42px); font-weight: 900; color: var(--text-primary); margin-bottom: 8px;">$255M</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0 0 4px 0;">Россия</p>
+                        <p style="font-size: clamp(11px, 1.2vw, 13px); color: var(--success-green); margin: 0;">✓ Доказано</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <p style="font-size: clamp(32px, 4vw, 42px); font-weight: 900; color: var(--text-primary); margin-bottom: 8px;">$975M</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0 0 4px 0;">США</p>
+                        <p style="font-size: clamp(11px, 1.2vw, 13px); color: var(--text-secondary); margin: 0;">Q1 2026</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <p style="font-size: clamp(32px, 4vw, 42px); font-weight: 900; color: var(--text-primary); margin-bottom: 8px;">$1.26B</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0 0 4px 0;">LATAM</p>
+                        <p style="font-size: clamp(11px, 1.2vw, 13px); color: var(--text-secondary); margin: 0;">Q2-Q3 2026</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <p style="font-size: clamp(32px, 4vw, 42px); font-weight: 900; color: var(--text-primary); margin-bottom: 8px;">$500M</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0 0 4px 0;">Европа</p>
+                        <p style="font-size: clamp(11px, 1.2vw, 13px); color: var(--text-secondary); margin: 0;">2027+</p>
+                    </div>
+                </div>
+                
+                <div style="width: 100px; height: 1px; background: var(--gradient-gold); margin-bottom: 40px;"></div>
+                
+                <div style="display: flex; gap: 60px; justify-content: center; text-align: left;">
+                    <div>
+                        <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--primary-gold); font-weight: 600; margin-bottom: 12px;">PRIMARY</p>
+                        <p style="font-size: clamp(15px, 1.6vw, 18px); color: var(--text-primary); margin-bottom: 8px;">Бабушки 50-65 лет</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">Основная покупательская аудитория</p>
+                    </div>
+                    <div>
+                        <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--text-secondary); font-weight: 600; margin-bottom: 12px;">SECONDARY</p>
+                        <p style="font-size: clamp(15px, 1.6vw, 18px); color: var(--text-primary); margin-bottom: 8px;">Мамы 25-42 года</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">Дети 2-10 лет, средний класс+</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: Конкуренты + MOATS -->
+            <section style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 50px;">Конкуренты & Защитные рвы</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 60px; max-width: 1100px;">
+                    <div style="padding: 20px; background: rgba(255, 255, 255, 0.02); border-radius: 12px; text-align: left;">
+                        <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--primary-gold); font-weight: 600; margin-bottom: 8px;">Wonderbly</p>
+                        <p style="font-size: clamp(12px, 1.3vw, 14px); color: var(--success-green); margin-bottom: 8px;">M&A → PRH · $28M</p>
+                        <p style="font-size: clamp(11px, 1.2vw, 13px); color: var(--text-secondary); margin: 0;">Шаблоны, мы — AI</p>
+                    </div>
+                    <div style="padding: 20px; background: rgba(212, 175, 55, 0.05); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 12px; text-align: left;">
+                        <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--primary-gold); font-weight: 600; margin-bottom: 8px;">DreamStories.ai</p>
+                        <p style="font-size: clamp(12px, 1.3vw, 14px); color: var(--text-primary); margin-bottom: 8px;">$6M ARR · 7 человек</p>
+                        <p style="font-size: clamp(11px, 1.2vw, 13px); color: var(--text-secondary); margin: 0;">Главный AI-конкурент</p>
+                    </div>
+                    <div style="padding: 20px; background: rgba(255, 255, 255, 0.02); border-radius: 12px; text-align: left;">
+                        <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--primary-gold); font-weight: 600; margin-bottom: 8px;">Skazbuka</p>
+                        <p style="font-size: clamp(12px, 1.3vw, 14px); color: var(--success-green); margin-bottom: 8px;">M&A → Яндекс</p>
+                        <p style="font-size: clamp(11px, 1.2vw, 13px); color: var(--text-secondary); margin: 0;">РФ открыт для AI</p>
+                    </div>
+                </div>
+                
+                <p style="font-size: clamp(15px, 1.6vw, 18px); color: var(--text-secondary); margin-bottom: 50px; max-width: 800px;">Крупные издательства активно покупают персонализацию — Exit возможен</p>
+                
+                <div style="width: 100px; height: 1px; background: var(--gradient-gold); margin-bottom: 40px;"></div>
+                
+                <p style="font-size: clamp(18px, 2vw, 22px); color: var(--primary-gold); font-weight: 600; margin-bottom: 40px;">НАШИ ПРЕИМУЩЕСТВА</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 1000px;">
+                    <div style="padding: 24px; background: rgba(255, 255, 255, 0.02); border-radius: 12px; text-align: left;">
+                        <p style="font-size: clamp(15px, 1.7vw, 18px); color: var(--text-primary); font-weight: 600; margin-bottom: 12px;">AI вместо команды</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">CAPEX $600 vs $75K · <span style="color: var(--primary-gold);">150x экономия</span></p>
+                    </div>
+                    <div style="padding: 24px; background: rgba(255, 255, 255, 0.02); border-radius: 12px; text-align: left;">
+                        <p style="font-size: clamp(15px, 1.7vw, 18px); color: var(--text-primary); font-weight: 600; margin-bottom: 12px;">Прибыльность с дня 1</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">ROI 1.65x за 3 недели · Индустрия: 3 года</p>
+                    </div>
+                    <div style="padding: 24px; background: rgba(255, 255, 255, 0.02); border-radius: 12px; text-align: left;">
+                        <p style="font-size: clamp(15px, 1.7vw, 18px); color: var(--text-primary); font-weight: 600; margin-bottom: 12px;">3 рынка одновременно</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">РФ (доказано) → США → LATAM</p>
+                    </div>
+                    <div style="padding: 24px; background: rgba(255, 255, 255, 0.02); border-radius: 12px; text-align: left;">
+                        <p style="font-size: clamp(15px, 1.7vw, 18px); color: var(--text-primary); font-weight: 600; margin-bottom: 12px;">Органический трафик</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); margin: 0;">Растёт БЕЗ вложений + SEO запущен</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 8: Бизнес-модель + Юнит-экономика -->
+            <section style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 50px;">Бизнес-модель & Экономика</p>
+                
+                <div style="display: flex; gap: 50px; justify-content: center; margin-bottom: 60px;">
+                    <div style="padding: 32px; background: rgba(0, 200, 81, 0.05); border: 1px solid var(--success-green); border-radius: 12px; text-align: center;">
+                        <p style="font-size: clamp(36px, 4.5vw, 48px); font-weight: 900; color: var(--success-green); margin-bottom: 12px;">92%</p>
+                        <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary); margin: 0 0 4px 0;">Digital маржа</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-primary); margin: 0;">990₽</p>
+                    </div>
+                    <div style="padding: 32px; background: rgba(0, 200, 81, 0.05); border: 1px solid var(--success-green); border-radius: 12px; text-align: center;">
+                        <p style="font-size: clamp(36px, 4.5vw, 48px); font-weight: 900; color: var(--success-green); margin-bottom: 12px;">65%</p>
+                        <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary); margin: 0 0 4px 0;">Print маржа</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-primary); margin: 0;">3,990₽</p>
+                    </div>
+                </div>
+                
+                <div style="width: 100px; height: 1px; background: var(--gradient-gold); margin-bottom: 40px;"></div>
+                
+                <p style="font-size: clamp(18px, 2vw, 22px); color: var(--primary-gold); font-weight: 600; margin-bottom: 40px;">СРАВНЕНИЕ С ИНДУСТРИЕЙ</p>
+                
+                <div style="display: flex; gap: 50px; justify-content: center; max-width: 1000px; text-align: left;">
+                    <div style="flex: 1; padding: 24px; background: rgba(255, 255, 255, 0.02); border-radius: 12px;">
+                        <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--text-secondary); font-weight: 600; margin-bottom: 16px;">Традиционный стартап</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); line-height: 1.8; margin: 0;">
+                            CAPEX: $75K<br>
+                            Безубыточность: 37 мес<br>
+                            Burn rate: $150K/год
                         </p>
-                        <ul>
-                            <li>Покупают в подарок внукам</li>
-                            <li>Выше средний чек</li>
-                            <li>Эмоциональная покупка</li>
-                        </ul>
                     </div>
-                    <div class="col">
-                        <h3>SECONDARY</h3>
-                        <ul>
-                            <li>Мамы 25-42 года</li>
-                            <li>Дети 2-10 лет</li>
-                            <li>Доход от 50,000₽+/год (средний класс+)</li>
-                            <li>Активные в соцсетях</li>
-                            <li>Ищут развивающие и эмоциональные подарки</li>
-                        </ul>
+                    <div style="flex: 1; padding: 24px; background: rgba(0, 200, 81, 0.05); border: 1px solid var(--success-green); border-radius: 12px;">
+                        <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--success-green); font-weight: 600; margin-bottom: 16px;">Skazka.ai (AI-модель)</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-primary); line-height: 1.8; margin: 0;">
+                            CAPEX: <span style="color: var(--primary-gold);">$600 → 150x экономия</span><br>
+                            Безубыточность: <span style="color: var(--primary-gold);">3 недели → 50x быстрее</span><br>
+                            Burn rate: <span style="color: var(--primary-gold);">$10K/год → 15x экономия</span>
+                        </p>
                     </div>
-                </div>
-                <div style="padding: 24px; background: rgba(212, 175, 55, 0.05); border-radius: 12px; margin-top: 30px;">
-                    <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary);">
-                        <strong class="gold">OCCASIONS (Поводы):</strong> 
-                        Дни рождения: <strong>65%</strong> · Новый Год: <strong>20%</strong> · "Просто так": <strong>15%</strong>
-                    </p>
                 </div>
             </section>
 
-            <!-- Slide 9: Конкурентный ландшафт -->
-            <section>
-                <h2>Конкурентный ландшафт</h2>
-                <div class="stat-large">
-                    <div class="number">$2.5B</div>
-                    <div class="label">РЫНОК, РАСТЁТ 7-9% ЕЖЕГОДНО</div>
+            <!-- Slide 9: GTM + Каналы -->
+            <section style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 50px;">Go-to-Market & Каналы</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 60px; max-width: 1100px; width: 100%;">
+                    <div style="padding: 24px; background: rgba(0, 200, 81, 0.05); border: 1px solid var(--success-green); border-radius: 12px; text-align: left;">
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--success-green); font-weight: 600; margin-bottom: 12px;">✓ РОССИЯ (DONE)</p>
+                        <p style="font-size: clamp(15px, 1.6vw, 18px); color: var(--text-primary); font-weight: 600; margin-bottom: 8px;">Декабрь 2025</p>
+                        <p style="font-size: clamp(12px, 1.3vw, 14px); color: var(--text-secondary); margin: 0;">320K₽ · 239 клиентов · ROI 1.65x</p>
+                    </div>
+                    <div style="padding: 24px; background: rgba(212, 175, 55, 0.05); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 12px; text-align: left;">
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--primary-gold); font-weight: 600; margin-bottom: 12px;">→ США (Q1 2026)</p>
+                        <p style="font-size: clamp(15px, 1.6vw, 18px); color: var(--text-primary); font-weight: 600; margin-bottom: 8px;">Unit-тест</p>
+                        <p style="font-size: clamp(12px, 1.3vw, 14px); color: var(--text-secondary); margin: 0;">$5-10K бюджет · Цель $1-2K MRR</p>
+                    </div>
+                    <div style="padding: 24px; background: rgba(212, 175, 55, 0.05); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 12px; text-align: left;">
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--primary-gold); font-weight: 600; margin-bottom: 12px;">→ LATAM (Q2-Q3 2026)</p>
+                        <p style="font-size: clamp(15px, 1.6vw, 18px); color: var(--text-primary); font-weight: 600; margin-bottom: 8px;">Масштабирование</p>
+                        <p style="font-size: clamp(12px, 1.3vw, 14px); color: var(--text-secondary); margin: 0;">$10-20K бюджет · Цель $10K+ MRR</p>
+                    </div>
                 </div>
-                <p style="font-size: clamp(15px, 1.8vw, 18px); color: var(--text-secondary); line-height: 1.6; text-align: center; max-width: 900px; margin: 20px auto 0;">
-                    <strong class="gold">Глобальный рынок персонализированных детских книг:</strong><br>
-                    Оценка: сотни миллионов долларов · CAGR: 7-9% до 2032 года · Активная M&A активность 
-                    (Penguin Random House, Яндекс покупают игроков)
+                
+                <div style="width: 100px; height: 1px; background: var(--gradient-gold); margin-bottom: 40px;"></div>
+                
+                <p style="font-size: clamp(18px, 2vw, 22px); color: var(--text-primary); font-weight: 600; margin-bottom: 30px;">КАНАЛЫ</p>
+                
+                <div style="display: flex; gap: 60px; justify-content: center; text-align: left; flex-wrap: wrap;">
+                    <div>
+                        <p style="font-size: clamp(15px, 1.6vw, 18px); color: var(--success-green); font-weight: 600; margin-bottom: 12px;">✓ СЕЙЧАС</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); line-height: 1.8; margin: 0;">
+                            Яндекс.Директ (CPL 78₽)<br>
+                            РСЯ (Ретаргетинг)<br>
+                            Органика + SEO
+                        </p>
+                    </div>
+                    <div>
+                        <p style="font-size: clamp(15px, 1.6vw, 18px); color: var(--primary-gold); font-weight: 600; margin-bottom: 12px;">Q1-Q2 2026</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); line-height: 1.8; margin: 0;">
+                            Google Ads<br>
+                            Meta Ads<br>
+                            TikTok Ads
+                        </p>
+                    </div>
+                    <div>
+                        <p style="font-size: clamp(15px, 1.6vw, 18px); color: var(--text-secondary); font-weight: 600; margin-bottom: 12px;">2027+</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); line-height: 1.8; margin: 0;">
+                            B2B (сады, бренды)<br>
+                            Партнёрская программа<br>
+                            PR / Media
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 10: Команда + Партнёры + Ресурсы -->
+            <section style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 50px;">Ключевые ресурсы</p>
+                
+                <div style="display: flex; gap: 60px; justify-content: center; margin-bottom: 60px; text-align: left; max-width: 900px;">
+                    <div style="flex: 1;">
+                        <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--primary-gold); font-weight: 600; margin-bottom: 20px;">AI Technology</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); line-height: 1.8; margin: 0;">
+                            LLM (3+ языков)<br>
+                            Image Gen (детский стиль)<br>
+                            Face Personalization<br>
+                            Audio (озвучка)
+                        </p>
+                    </div>
+                    <div style="flex: 1;">
+                        <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--primary-gold); font-weight: 600; margin-bottom: 20px;">Партнёры</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); line-height: 1.8; margin: 0;">
+                            Типографии (РФ, США, LATAM)<br>
+                            Logistics (5-7 дней)<br>
+                            Эквайринг<br>
+                            Аналитика
+                        </p>
+                    </div>
+                </div>
+                
+                <div style="width: 100px; height: 1px; background: var(--gradient-gold); margin-bottom: 40px;"></div>
+                
+                <p style="font-size: clamp(18px, 2vw, 22px); color: var(--text-primary); font-weight: 300; margin-bottom: 30px;">AI КАК КОМАНДА РАЗРАБОТЧИКОВ</p>
+                
+                <div style="padding: 32px 48px; background: rgba(212, 175, 55, 0.05); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 12px;">
+                    <p style="font-size: clamp(32px, 4vw, 42px); font-weight: 900; color: var(--primary-gold); margin-bottom: 12px;">100K+</p>
+                    <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary); margin: 0;">строк production кода через AI за <strong style="color: var(--success-green);">$600</strong> vs $100K+/год команда</p>
+                </div>
+            </section>
+
+            <!-- Slide 11: Цель питча + Контакты (Final) -->
+            <section style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                <p style="font-size: clamp(28px, 3.5vw, 36px); color: var(--text-primary); font-weight: 300; line-height: 1.4; max-width: 800px; margin-bottom: 60px;">
+                    Я сам себе инвестор. Передо мной стоит вопрос:<br><br>
+                    <span style="color: var(--primary-gold); font-weight: 600;">Отправить этого фаундера искать новую модель?<br>Или продолжать вкладываться в Skazka.ai?</span>
                 </p>
-            </section>
-
-            <!-- Slide 10: Карта конкурентов -->
-            <section>
-                <h2>Карта конкурентов</h2>
-                <h3 style="text-align: left; margin-bottom: 20px;">Англоязычный рынок (США/UK):</h3>
-                <table class="data-table" style="margin-bottom: 30px;">
-                    <thead>
-                        <tr>
-                            <th>Компания</th>
-                            <th>Модель</th>
-                            <th>Статус</th>
-                            <th>Выводы</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Wonderbly</strong></td>
-                            <td>Шаблоны + имя</td>
-                            <td><strong class="success">M&A</strong>: Куплена PRH. $20-28M привлечено</td>
-                            <td>Доказали модель. PRH покупает персонализацию.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>DreamStories.ai</strong></td>
-                            <td><strong class="gold">AI-генерация</strong></td>
-                            <td><strong class="gold">$6M ARR</strong>, 7 человек, 100K книг</td>
-                            <td><strong>Главный AI-конкурент</strong></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Put Me In The Story</strong></td>
-                            <td>Лицензии (Disney, Marvel)</td>
-                            <td><strong class="success">M&A</strong>: 45% куплено PRH</td>
-                            <td>Высокие роялти. Мы без лицензий = выше маржа.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Hooray Heroes</strong></td>
-                            <td>Вирусный маркетинг</td>
-                            <td>$3M+ выручка, bootstrapped</td>
-                            <td>Сильный эмоциональный маркетинг.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <!-- Slide 11: Испаноязычный и русскоязычный рынки -->
-            <section>
-                <h2>Карта конкурентов (продолжение)</h2>
-                <h3 style="text-align: left; margin-bottom: 16px;">Испаноязычный рынок (Испания/LatAm):</h3>
-                <table class="data-table" style="margin-bottom: 30px;">
-                    <tbody>
-                        <tr>
-                            <td><strong>MiCuento</strong></td>
-                            <td>Образовательный фокус</td>
-                            <td>€2.5M привлечено (Impact Partners)</td>
-                            <td>Есть игроки, но <strong class="gold">НЕТ AI-лидера</strong> типа DreamStories</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Mumablue</strong></td>
-                            <td>Визуальная персонализация</td>
-                            <td>500K книг, Google for Startups</td>
-                            <td>Растущий рынок. Мы можем стать первым AI-игроком.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <h3 style="text-align: left; margin-bottom: 16px;">Русскоязычный рынок (РФ/СНГ):</h3>
-                <table class="data-table">
-                    <tbody>
-                        <tr>
-                            <td><strong>Skazbuka</strong></td>
-                            <td>EdTech приложение</td>
-                            <td><strong class="success">M&A</strong>: Куплена Яндексом</td>
-                            <td>Яндекс активно покупает персонализацию!</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Локальные</strong></td>
-                            <td>Фотокниги (WB/Ozon)</td>
-                            <td>Малый бизнес, шаблоны</td>
-                            <td><strong class="gold">НЕТ AI-игрока</strong>. Мы первые с AI.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <!-- Slide 12: Сравнение с конкурентами -->
-            <section>
-                <h2>Skazka.ai VS Конкуренты</h2>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Параметр</th>
-                            <th>DreamStories (AI-лидер)</th>
-                            <th>Wonderbly (Классика)</th>
-                            <th><strong class="gold">Skazka.ai (МЫ)</strong></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Модель</td>
-                            <td>AI-генерация</td>
-                            <td>Шаблоны + персонализация</td>
-                            <td><strong class="gold">AI-генерация</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Команда</td>
-                            <td>7 человек</td>
-                            <td>50+ человек</td>
-                            <td><strong class="gold">1 человек + AI</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Статус</td>
-                            <td>$6M ARR, 100K книг</td>
-                            <td>Куплена PRH за $XX0M</td>
-                            <td><strong class="gold">$4K за 3 недели, ROI 1.65x</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Рынки</td>
-                            <td>США, Англоязычные</td>
-                            <td>Глобально</td>
-                            <td><strong class="gold">РФ (доказано) + США + LATAM</strong></td>
-                        </tr>
-                        <tr>
-                            <td>CAPEX</td>
-                            <td>~$75K</td>
-                            <td>$75K+</td>
-                            <td><strong class="success">$600 (AI подписки)</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Burn Rate</td>
-                            <td>~$500K/год</td>
-                            <td>$XXM/год</td>
-                            <td><strong class="success">~$10K/год</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Безубыточность</td>
-                            <td>Неизвестно</td>
-                            <td>3 года (индустрия стандарт)</td>
-                            <td><strong class="success">Уже достигнута (ROI 1.65x)</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <!-- Slide 13: Конкурентное преимущество -->
-            <section>
-                <h2>Наше конкурентное преимущество</h2>
-                <div class="numbered-list">
-                    <li>
-                        <strong>Multi-Market Strategy</strong>
-                        <p>Конкуренты фокусируются на 1 рынке. Мы одновременно: РФ (доказано) → США (тест) → LATAM (масштаб). <strong class="gold">Сложно конкурировать на 3 рынках сразу</strong></p>
-                    </li>
-                    <li>
-                        <strong>AI вместо команды = 100x экономия</strong>
-                        <p>Традиционные стартапы: CAPEX $75K, burn rate $424K/год. <strong class="gold">Мы:</strong> CAPEX $600, burn rate $10K/год. <strong class="gold">Можем работать в 50 раз дольше</strong> на тот же капитал</p>
-                    </li>
-                    <li>
-                        <strong>Прибыльность с первого клиента</strong>
-                        <p>Индустрия: безубыточность через 3 года. <strong class="gold">Мы:</strong> ROI 1.65x уже доказан за 3 недели</p>
-                    </li>
-                    <li>
-                        <strong>Органический трафик</strong>
-                        <p>DreamStories: "сотни тысяч $ в месяц" на рекламу. <strong class="gold">Мы:</strong> Органика растет БЕЗ вложений + запустили SEO</p>
-                    </li>
-                </div>
-            </section>
-
-            <!-- Slide 14: MOATS -->
-            <section>
-                <h2>MOATS (Защитные рвы)</h2>
-                <div class="moats-grid">
-                    <div class="moat-card">
-                        <div class="moat-title">Speed Moat</div>
-                        <div class="moat-description">
-                            Уже работаем с доказанной экономикой, конкуренты начинают с нуля
-                        </div>
+                
+                <div style="width: 100px; height: 2px; background: var(--gradient-gold); margin-bottom: 50px;"></div>
+                
+                <div style="display: flex; gap: 60px; justify-content: center; text-align: left; margin-bottom: 60px; max-width: 900px;">
+                    <div>
+                        <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--primary-gold); font-weight: 600; margin-bottom: 16px;">ЧТО У НАС ЕСТЬ:</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); line-height: 1.8; margin: 0;">
+                            ✓ Продукт работает<br>
+                            ✓ 239 платящих клиентов<br>
+                            ✓ ROI 1.65x<br>
+                            ✓ TAM $2.5B
+                        </p>
                     </div>
-                    <div class="moat-card">
-                        <div class="moat-title">Know-How Moat</div>
-                        <div class="moat-description">
-                            Накопленная экспертиза по AI-генерации для детей, prompt engineering, опыт 239 клиентов
-                        </div>
-                    </div>
-                    <div class="moat-card">
-                        <div class="moat-title">Cost Moat</div>
-                        <div class="moat-description">
-                            $10K расходы/год vs $424K у конкурентов → <strong class="gold">42x преимущество</strong> по операционным расходам
-                        </div>
-                    </div>
-                    <div class="moat-card">
-                        <div class="moat-title">Geographic Moat</div>
-                        <div class="moat-description">
-                            3 рынка одновременно (сложно копировать)
-                        </div>
-                    </div>
-                    <div class="moat-card">
-                        <div class="moat-title">Data Moat</div>
-                        <div class="moat-description">
-                            Чем больше книг → лучше понимаем что работает, улучшаем алгоритмы
-                        </div>
+                    <div>
+                        <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--text-secondary); font-weight: 600; margin-bottom: 16px;">ЧТО ХОЧУ ПОНЯТЬ:</p>
+                        <p style="font-size: clamp(13px, 1.4vw, 15px); color: var(--text-secondary); line-height: 1.8; margin: 0;">
+                            • Стоит ли масштабировать?<br>
+                            • Где подводные камни?<br>
+                            • Что упускаю из виду?<br>
+                            • Какие риски не вижу?
+                        </p>
                     </div>
                 </div>
-            </section>
-
-            <!-- Slide 15: Риски и митигация -->
-            <section>
-                <h2>Риски и митигация</h2>
-                <div class="comparison">
-                    <div class="comparison-item">
-                        <h3>⚠️ РИСК 1</h3>
-                        <p style="margin-bottom: 16px;">DreamStories зальёт $10M в маркетинг</p>
-                        <h4 style="color: var(--success-green); margin-bottom: 12px;">✓ ЗАЩИТА:</h4>
-                        <ul>
-                            <li>Мы на других рынках (РФ, LATAM)</li>
-                            <li>SEO + органика (не зависим от рекламы)</li>
-                            <li>Бабушки (наша ниша) — другой канал</li>
-                        </ul>
-                    </div>
-                    <div class="comparison-item">
-                        <h3>⚠️ РИСК 2</h3>
-                        <p style="margin-bottom: 16px;">Wonderbly/PRH запустит AI-версию</p>
-                        <h4 style="color: var(--success-green); margin-bottom: 12px;">✓ ЗАЩИТА:</h4>
-                        <ul>
-                            <li>Большие компании медленные (бюрократия)</li>
-                            <li>Мы быстрее итерируем</li>
-                            <li>У нас уже есть клиенты и данные</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Slide 16: TAM - Bottom-Up -->
-            <section>
-                <h2>Оценка рынка (TAM) — Bottom-Up подход</h2>
-                <p style="font-size: clamp(15px, 1.7vw, 17px); color: var(--text-secondary); margin-bottom: 30px; text-align: center;">
-                    Методология: Количество детей × Средний чек × % проникновения
+                
+                <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary); margin-bottom: 60px;">
+                    Не ищу инвестиции сейчас — ищу экспертизу и честный взгляд со стороны
                 </p>
-                <div class="market-grid">
-                    <div class="market-item">
-                        <h4>Россия (Валидация — DONE)</h4>
-                        <div class="market-value">$255M</div>
-                        <ul style="font-size: clamp(13px, 1.4vw, 15px); text-align: left;">
-                            <li>~15M детей 2-10 лет</li>
-                            <li>Средний чек: $17 (1,341₽)</li>
-                            <li>Проникновение: 1%</li>
-                            <li><strong class="success">✓ 239 клиентов, ROI 1.65x</strong></li>
-                        </ul>
+                
+                <div style="display: flex; gap: 60px; justify-content: center; margin-bottom: 40px;">
+                    <div style="text-align: center;">
+                        <p style="font-size: clamp(40px, 5vw, 56px); font-weight: 900; color: var(--primary-gold); margin-bottom: 8px;">$2.5B</p>
+                        <p style="font-size: clamp(12px, 1.3vw, 14px); color: var(--text-secondary); margin: 0;">TAM</p>
                     </div>
-                    <div class="market-item">
-                        <h4>США (Тест — Q1 2026)</h4>
-                        <div class="market-value">$975M</div>
-                        <ul style="font-size: clamp(13px, 1.4vw, 15px); text-align: left;">
-                            <li>~39M детей 2-10 лет</li>
-                            <li>Target средний чек: $25-40</li>
-                            <li>Проникновение: 2.5%</li>
-                            <li>Высокая платёжеспособность</li>
-                        </ul>
+                    <div style="text-align: center;">
+                        <p style="font-size: clamp(40px, 5vw, 56px); font-weight: 900; color: var(--success-green); margin-bottom: 8px;">1.65x</p>
+                        <p style="font-size: clamp(12px, 1.3vw, 14px); color: var(--text-secondary); margin: 0;">ROI</p>
                     </div>
-                    <div class="market-item">
-                        <h4>LATAM (Масштаб — Q2-Q3 2026)</h4>
-                        <div class="market-value">$1.26B</div>
-                        <ul style="font-size: clamp(13px, 1.4vw, 15px); text-align: left;">
-                            <li>~105M детей 2-10 лет</li>
-                            <li>Средний чек: $12-20</li>
-                            <li>Проникновение: 1%</li>
-                            <li><strong class="gold">✓ Я в Аргентине, НЕТ AI-игрока</strong></li>
-                        </ul>
-                    </div>
-                    <div class="market-item">
-                        <h4>Европа (2027+)</h4>
-                        <div class="market-value">$500M</div>
-                        <ul style="font-size: clamp(13px, 1.4vw, 15px); text-align: left;">
-                            <li>~50M детей 2-10 лет</li>
-                            <li>Средний чек: $20-30</li>
-                            <li>Зрелый рынок</li>
-                        </ul>
+                    <div style="text-align: center;">
+                        <p style="font-size: clamp(40px, 5vw, 56px); font-weight: 900; color: var(--text-primary); margin-bottom: 8px;">239</p>
+                        <p style="font-size: clamp(12px, 1.3vw, 14px); color: var(--text-secondary); margin: 0;">Клиентов</p>
                     </div>
                 </div>
-                <div class="stat-large" style="margin-top: 30px;">
-                    <div class="number">$2.5B</div>
-                    <div class="label">Total Addressable Market</div>
-                </div>
-            </section>
-
-            <!-- Slide 17: Go-to-Market (GTM) -->
-            <section>
-                <h2>Go-to-Market (GTM)</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-header">
-                            <span class="timeline-badge validated">✓ ВЫПОЛНЕНО</span>
-                            <span class="timeline-title">Этап 1: Валидация (РФ)</span>
-                        </div>
-                        <div class="timeline-content">
-                            <strong>Период:</strong> Декабрь 2025 (3 недели)<br>
-                            <strong>Результаты:</strong> Выручка 320,531₽ (~$4K) · 239 клиентов · 3,012 leads · ROI 1.65x<br>
-                            <strong>Вывод:</strong> PMF доказан. Модель прибыльная с первого клиента.
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-header">
-                            <span class="timeline-badge testing">🟡 Q1 2026</span>
-                            <span class="timeline-title">Этап 2: Unit-тест США</span>
-                        </div>
-                        <div class="timeline-content">
-                            <strong>Гипотеза:</strong> США готовы платить $19-59 за книгу<br>
-                            <strong>Каналы:</strong> Google Ads, Meta Ads, Pinterest<br>
-                            <strong>Бюджет:</strong> $5-10K · <strong>KPI:</strong> $1-2K MRR, CAC < $15, ROI > 1.5x<br>
-                            <strong>План Б:</strong> Если не окупается → фокус на LATAM
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-header">
-                            <span class="timeline-badge">🔵 Q2-Q3 2026</span>
-                            <span class="timeline-title">Этап 3: Масштабирование LATAM</span>
-                        </div>
-                        <div class="timeline-content">
-                            <strong>Преимущества:</strong> Я в Аргентине → понимаю менталитет · Дешёвый трафик (в 2-3 раза дешевле США) · 105M детей · НЕТ AI-конкурента<br>
-                            <strong>Бюджет:</strong> $10-20K · <strong>KPI:</strong> $10K+ MRR, 500+ клиентов, CAC < $8
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-header">
-                            <span class="timeline-badge">🟣 2027+</span>
-                            <span class="timeline-title">Этап 4: B2B + Подписки</span>
-                        </div>
-                        <div class="timeline-content">
-                            <strong>B2B:</strong> Детские сады (от $5K), Бренды детских товаров (от $50K), Издательства (White-label)<br>
-                            <strong>Подписка:</strong> 7,990₽/год = 10 книг (скидка 20%, предсказуемый MRR)
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Slide 18: Источники дохода -->
-            <section>
-                <h2>Источники дохода</h2>
-                <h3 style="text-align: left; margin-bottom: 20px;">Текущая модель (B2C):</h3>
-                <div class="two-col" style="margin-bottom: 30px;">
-                    <div class="col">
-                        <h4>Digital книга</h4>
-                        <ul>
-                            <li>Цена: 990₽ (~$12)</li>
-                            <li>Себестоимость: ~80₽ (AI, серверы)</li>
-                            <li><strong class="success">Маржа: 92%</strong></li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <h4>Print книга</h4>
-                        <ul>
-                            <li>Цена: 3,990₽ (~$50)</li>
-                            <li>Себестоимость: ~1,400₽ (печать, доставка)</li>
-                            <li><strong class="success">Маржа: 65%</strong></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="highlight" style="margin-bottom: 30px;">
-                    <p style="text-align: center;"><strong>Текущие метрики (Декабрь 2025):</strong><br>
-                    AOV: 1,341₽ · LTV: 1,627₽ · Выручка: 320,531₽ · Клиентов: 239 · Повторные покупки: ~21%</p>
-                </div>
-                <h3 style="text-align: left; margin-bottom: 16px;">Будущие источники (2026-2027):</h3>
-                <ul style="font-size: clamp(14px, 1.6vw, 16px);">
-                    <li><strong>Подписка (Q2 2026):</strong> 7,990₽/год = 10 книг, предсказуемый MRR</li>
-                    <li><strong>B2B - Детские сады (Q3 2026):</strong> 30 детей × 3,000₽ = 90,000₽, маржа 70%</li>
-                    <li><strong>B2B - Бренды (2027):</strong> Контракты от $50K</li>
-                    <li><strong>Аудио-книги (Q2-Q3 2026):</strong> Голос родителей/бабушек +990₽</li>
-                    <li><strong>Видео-сказки (2027):</strong> +1,990₽</li>
-                    <li><strong>Мерч (2027):</strong> +1,990₽</li>
-                </ul>
-                <div style="margin-top: 30px; padding: 24px; background: rgba(212, 175, 55, 0.05); border-radius: 12px;">
-                    <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary); text-align: center;">
-                        <strong class="gold">Прогноз роста AOV:</strong> 2025: 1,341₽ (факт) → 2026 Q2: 2,000₽ → 2026 Q4: 2,500₽ → 2027: 3,500₽+
+                
+                <div style="padding: 24px 40px; background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 12px;">
+                    <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary); line-height: 2; margin: 0;">
+                        <strong style="color: var(--primary-gold);">Telegram:</strong> <span style="color: var(--text-primary);">@david_aleksanian</span><br>
+                        <strong style="color: var(--primary-gold);">Сайт:</strong> <span style="color: var(--text-primary);">skazka.ai</span>
                     </p>
                 </div>
             </section>
 
-            <!-- Slide 19: Каналы взаимодействия -->
-            <section>
-                <h2>Каналы взаимодействия</h2>
-                <h3 style="text-align: left; margin-bottom: 20px;">TIER 1 — СЕЙЧАС (Работают):</h3>
-                <ul style="margin-bottom: 30px;">
-                    <li><strong class="success">Яндекс.Директ:</strong> CPL: 78₽, основной канал</li>
-                    <li><strong class="success">РСЯ:</strong> Ретаргетинг, дешевле Директа</li>
-                    <li><strong class="success">Органика (Google, Яндекс):</strong> Растёт БЕЗ SEO-оптимизации. Запустили SEO с Артёмом (январь 2026)</li>
-                </ul>
-                <h3 style="text-align: left; margin-bottom: 20px;">TIER 2 — Q1-Q2 2026:</h3>
-                <ul style="margin-bottom: 30px;">
-                    <li><strong>Google Ads (США):</strong> Search: "personalized children's books" · Display: Ремаркетинг · YouTube: Pre-roll для мам</li>
-                    <li><strong>Meta Ads:</strong> Таргетинг: Бабушки 50-65, мамы 25-42 · Креативы: До/После · Stories, Reels</li>
-                    <li><strong>TikTok Ads:</strong> UGC контент (реакции детей) · Дешёвый трафик для LATAM</li>
-                </ul>
-                <h3 style="text-align: left; margin-bottom: 20px;">TIER 3 — Q3-Q4 2026:</h3>
-                <ul style="margin-bottom: 20px;">
-                    <li>Pinterest · Influencers / Блогеры · TG-каналы · Партнёрская программа (реферальная система)</li>
-                </ul>
-                <h3 style="text-align: left; margin-bottom: 20px;">TIER 4 — 2027+:</h3>
-                <ul>
-                    <li>SEO (топ-3 по ключевым запросам) · B2B продажи · PR / Media</li>
-                </ul>
-            </section>
-
-            <!-- Slide 20: Партнёры -->
-            <section>
-                <h2>Партнёры</h2>
-                <div class="two-col">
-                    <div class="col">
-                        <h3>AI Technology Stack</h3>
-                        <ul>
-                            <li><strong>LLM:</strong> Современные языковые модели, 3+ языков</li>
-                            <li><strong>Image Gen:</strong> AI-генерация, детский стиль</li>
-                            <li><strong>Face Personalization:</strong> AI-технология персонализации лиц</li>
-                            <li><strong>Audio:</strong> Стандартная озвучка + голос родителей/бабушек</li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <h3>Производство</h3>
-                        <ul>
-                            <li><strong>Типографии:</strong> РФ (есть), США (планируется), LATAM (планируется)</li>
-                            <li><strong>Logistics:</strong> 5-7 дней, трекинг</li>
-                            <li><strong>Quality:</strong> NPS > 8/10</li>
-                        </ul>
-                    </div>
-                </div>
-                <div style="padding: 24px; background: rgba(212, 175, 55, 0.05); border-radius: 12px; margin-top: 30px;">
-                    <h3 style="text-align: left; margin-bottom: 16px;">Tech:</h3>
-                    <p style="font-size: clamp(14px, 1.5vw, 16px); color: var(--text-secondary);">
-                        <strong>Серверы:</strong> Аренда серверов · 
-                        <strong>Эквайринг:</strong> Интеграция с локальными системами · 
-                        <strong>Аналитика:</strong> Яндекс.Метрика, Google Analytics, Custom dashboard
-                    </p>
-                </div>
-            </section>
-
-            <!-- Slide 21: Ключевые ресурсы & Юнит-экономика -->
-            <section>
-                <h2>Ключевые ресурсы & Юнит-экономика</h2>
-                <div class="highlight">
-                    <h3>Доказано на реальных деньгах</h3>
-                    <p>Период: Декабрь 2025 (3 недели)</p>
-                </div>
-                <div class="metrics" style="margin: 30px 0;">
-                    <div class="metric">
-                        <div class="metric-label">Потрачено</div>
-                        <div class="metric-value">234,936₽</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-label">Leads</div>
-                        <div class="metric-value">3,012</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-label">CPL</div>
-                        <div class="metric-value">78₽</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-label">Lead → Paid</div>
-                        <div class="metric-value">7.9%</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-label">Покупок</div>
-                        <div class="metric-value">239</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-label">CAC</div>
-                        <div class="metric-value">984₽</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-label">Выручка</div>
-                        <div class="metric-value">320,531₽</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-label">AOV</div>
-                        <div class="metric-value">1,341₽</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-label">LTV</div>
-                        <div class="metric-value">1,627₽</div>
-                    </div>
-                </div>
-                <div class="stat-large" style="margin: 30px 0;">
-                    <div class="number">1.65x</div>
-                    <div class="label">ROI: На каждый рубль возвращается 1.65₽</div>
-                </div>
-                <div class="two-col" style="margin: 30px 0;">
-                    <div class="col">
-                        <div style="padding: 20px; background: rgba(0, 200, 81, 0.1); border-radius: 12px; border: 2px solid var(--success-green);">
-                            <div style="font-size: clamp(22px, 2.8vw, 32px); font-weight: 900; color: var(--success-green); margin-bottom: 6px;">85,595₽</div>
-                            <p style="font-size: clamp(13px, 1.4vw, 15px);"><strong>Gross Profit</strong><br>За 3 недели</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div style="padding: 20px; background: rgba(0, 200, 81, 0.1); border-radius: 12px; border: 2px solid var(--success-green);">
-                            <div style="font-size: clamp(22px, 2.8vw, 32px); font-weight: 900; color: var(--success-green); margin-bottom: 6px;">643₽</div>
-                            <p style="font-size: clamp(13px, 1.4vw, 15px);"><strong>Прибыль с клиента</strong><br>С первой покупки!</p>
-                        </div>
-                    </div>
-                </div>
-                <p style="font-size: clamp(14px, 1.6vw, 16px); color: var(--text-primary); text-align: center; margin-bottom: 30px;">
-                    Payback Period: < 30 дней · AI вместо команды: <strong class="gold">$600</strong> vs $100K+/год · 100K+ строк кода через AI
-                </p>
-                <div class="comparison" style="margin-top: 30px;">
-                    <div class="comparison-item">
-                        <h3>Традиционный стартап</h3>
-                        <ul>
-                            <li>CAPEX: <strong>$75K</strong></li>
-                            <li>Cash buffer: <strong>$424K</strong></li>
-                            <li>Безубыточность: <strong>37 месяцев (3 года)</strong></li>
-                            <li>Burn rate: ~$150K/год</li>
-                        </ul>
-                    </div>
-                    <div class="comparison-item">
-                        <h3>Skazka.ai (AI-модель)</h3>
-                        <ul>
-                            <li>CAPEX: <strong class="success">$600</strong> → <strong class="gold">150x экономия</strong></li>
-                            <li>Cash buffer: <strong class="success">Не нужен</strong></li>
-                            <li>Безубыточность: <strong class="success">3 недели</strong> → <strong class="gold">50x быстрее</strong></li>
-                            <li>Burn rate: <strong class="success">~$10K/год</strong> → <strong class="gold">15x экономия</strong></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Slide 22: Цель питча -->
-            <section>
-                <h2>Цель питча</h2>
-                <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--text-primary); margin-bottom: 30px; text-align: center;">
-                    Я выступаю в двух ролях:
-                </p>
-                <div class="two-col" style="margin-bottom: 30px;">
-                    <div class="col" style="text-align: center;">
-                        <div style="font-size: clamp(42px, 4.5vw, 56px); margin-bottom: 12px;">1</div>
-                        <p style="font-size: clamp(15px, 1.7vw, 18px);"><strong>Фаундер</strong><br>Создал Skazka.ai,<br>доказал модель (ROI 1.65x)</p>
-                    </div>
-                    <div class="col" style="text-align: center;">
-                        <div style="font-size: clamp(42px, 4.5vw, 56px); margin-bottom: 12px;">2</div>
-                        <p style="font-size: clamp(15px, 1.7vw, 18px);"><strong>Инвестор проекта</strong><br>Вложил свои<br>деньги и время</p>
-                    </div>
-                </div>
-                <div class="highlight" style="margin-bottom: 30px;">
-                    <p style="text-align: center; font-size: clamp(15px, 1.7vw, 18px);"><strong>ЗАЧЕМ Я ЗДЕСЬ:</strong><br>
-                    Хочу получить фидбэк от опытных предпринимателей и инвесторов с большой насмотренностью в бизнес-моделях</p>
-                </div>
-                <div class="quote">
-                    <p>Я сам себе инвестор. Передо мной стоит вопрос:<br><br>
-                    <strong style="color: var(--primary-gold);">Отправить этого фаундера искать новую модель?</strong><br>
-                    <strong style="color: var(--primary-gold);">Или продолжать вкладываться в Skazka.ai?</strong></p>
-                </div>
-            </section>
-
-            <!-- Slide 23: Что у нас есть & Что хочу понять -->
-            <section>
-                <h2>ЧТО У НАС ЕСТЬ:</h2>
-                <ul style="font-size: clamp(15px, 1.7vw, 17px); margin-bottom: 40px;">
-                    <li>✓ Продукт работает</li>
-                    <li>✓ 239 платящих клиентов</li>
-                    <li>✓ 320K₽ выручки за 3 недели</li>
-                    <li>✓ ROI 1.65x — модель прибыльная</li>
-                    <li>✓ Стратегия масштабирования (РФ → США → LATAM)</li>
-                    <li>✓ TAM $2.5B с обоснованием (Bottom-Up)</li>
-                    <li>✓ Конкурентное преимущество (100x экономия на CAPEX)</li>
-                </ul>
-                <h2>ЧТО ХОЧУ ПОНЯТЬ:</h2>
-                <ul style="font-size: clamp(16px, 1.8vw, 20px); line-height: 1.8; margin-bottom: 40px;">
-                    <li>Стоит ли масштабировать эту модель?</li>
-                    <li>Где подводные камни?</li>
-                    <li>Что упускаю из виду?</li>
-                    <li>Какие риски не вижу?</li>
-                </ul>
-                <div class="highlight">
-                    <p style="text-align: center; font-size: clamp(15px, 1.7vw, 18px);">
-                        <strong>Не ищу инвестиции сейчас</strong> — ищу экспертизу и честный взгляд со стороны.<br>
-                        <span style="font-size: clamp(13px, 1.5vw, 15px);">(Но если после фидбэка вы захотите инвестировать — открыт к разговору)</span>
-                    </p>
-                </div>
-            </section>
-
-            <!-- Slide 24: Final -->
-            <section class="hero">
-                <h1 style="margin-bottom: 50px;">Готов к вопросам!</h1>
-                <div class="metrics" style="width: 100%; margin-bottom: 60px;">
-                    <div class="metric">
-                        <div class="metric-value" style="color: var(--primary-gold);">$2.5B</div>
-                        <div class="metric-label">TAM</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-value">1.65x</div>
-                        <div class="metric-label">ROI доказан</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-value">239</div>
-                        <div class="metric-label">Клиентов</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-value">92%</div>
-                        <div class="metric-label">Маржа</div>
-                    </div>
-                </div>
-                <div style="padding: 30px; background: rgba(212, 175, 55, 0.1); border-radius: 12px; width: 100%; max-width: 600px;">
-                    <p style="font-size: clamp(16px, 1.8vw, 20px); color: var(--text-secondary); line-height: 1.8; text-align: left;">
-                        <strong style="color: var(--primary-gold);">Контакты:</strong><br>
-                        Telegram: <strong style="color: var(--text-primary);">@david_aleksanian</strong><br>
-                        Сайт: <strong style="color: var(--text-primary);">skazka.ai</strong>
-                    </p>
-                </div>
-            </section>
 
         </div>
     </div>
@@ -1604,43 +1254,22 @@
     <script>
         Reveal.initialize({
             hash: true,
-            slideNumber: 'c/t',
-            transition: 'fade',
-            transitionSpeed: 'default',
-            backgroundTransition: 'fade',
             center: false,
             width: '100%',
             height: '100%',
             margin: 0,
             minScale: 1,
             maxScale: 1,
+            transition: 'fade',
+            transitionSpeed: 'default',
+            backgroundTransition: 'fade',
             controls: true,
-            controlsTutorial: true,
-            controlsLayout: 'bottom-right',
-            controlsBackArrows: 'faded',
             progress: true,
-            history: true,
+            slideNumber: 'c/t',
             keyboard: true,
-            overview: true,
             touch: true,
             loop: false,
-            rtl: false,
-            navigationMode: 'default',
-            shuffle: false,
-            fragments: true,
-            fragmentInURL: true,
-            embedded: false,
-            help: true,
-            pause: true,
-            showNotes: false,
-            autoPlayMedia: null,
-            preloadIframes: null,
-            autoSlide: 0,
-            mouseWheel: false,
-            previewLinks: false,
-            hideInactiveCursor: true,
-            hideCursorTime: 3000,
-            disableLayout: false
+            rtl: false
         });
     </script>
 </body>
