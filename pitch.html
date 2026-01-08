@@ -28,24 +28,37 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
         .reveal {
             font-family: 'Inter', -apple-system, system-ui, sans-serif;
             background: var(--dark-bg);
             color: var(--text-primary);
             font-weight: 400;
+            width: 100%;
+            height: 100%;
         }
 
         .reveal .slides {
             text-align: left;
+            width: 100%;
+            height: 100%;
         }
 
         .reveal .slides section {
-            padding: 60px 80px;
+            padding: 5vh 6vw;
             background: var(--gradient-dark);
             box-sizing: border-box;
-            display: flex;
+            width: 100%;
+            height: 100%;
+            display: flex !important;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
+            align-items: flex-start;
         }
 
         .reveal .slides section::before {
@@ -64,6 +77,31 @@
         .reveal .slides section > * {
             position: relative;
             z-index: 1;
+            max-width: 100%;
+        }
+
+        /* Контейнер для контента с ограничением высоты */
+        .reveal .slides section {
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        /* Прячем скроллбар */
+        .reveal .slides section::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .reveal .slides section::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .reveal .slides section::-webkit-scrollbar-thumb {
+            background: rgba(212, 175, 55, 0.3);
+            border-radius: 3px;
+        }
+
+        .reveal .slides section::-webkit-scrollbar-thumb:hover {
+            background: rgba(212, 175, 55, 0.5);
         }
 
         .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
@@ -134,12 +172,12 @@
 
         /* Hero Slide */
         .hero {
-            display: flex;
+            display: flex !important;
             flex-direction: column;
-            justify-content: center;
+            justify-content: center !important;
             align-items: flex-start;
+            width: 100%;
             height: 100%;
-            position: relative;
         }
 
         .hero-badge {
@@ -171,9 +209,9 @@
         /* Metrics Grid */
         .metrics {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 16px;
-            margin-top: 25px;
+            margin-top: 20px;
         }
 
         .metric {
@@ -572,7 +610,7 @@
         /* Responsive */
         @media (max-width: 1024px) {
             .reveal .slides section {
-                padding: 40px 50px;
+                padding: 4vh 5vw;
             }
 
             .two-col,
@@ -580,34 +618,90 @@
             .market-grid,
             .moats-grid {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 20px;
             }
 
             .competitors-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
             }
 
             .timeline-content {
                 margin-left: 0;
             }
+
+            .metrics {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 768px) {
             .reveal .slides section {
-                padding: 30px 30px;
+                padding: 3vh 4vw;
+                justify-content: flex-start;
+            }
+
+            .reveal h1 {
+                font-size: clamp(32px, 8vw, 48px);
+            }
+
+            .reveal h2 {
+                font-size: clamp(24px, 6vw, 32px);
+                margin-bottom: 20px;
             }
 
             .metrics {
                 grid-template-columns: 1fr 1fr;
-                gap: 20px;
+                gap: 12px;
             }
 
             .competitors-grid {
                 grid-template-columns: 1fr;
+                gap: 12px;
             }
 
             .metric {
-                padding: 20px;
+                padding: 16px;
+            }
+
+            .stat-large .number {
+                font-size: clamp(40px, 12vw, 72px);
+            }
+
+            .two-col {
+                gap: 20px;
+            }
+
+            .comparison {
+                gap: 20px;
+            }
+
+            .market-grid {
+                gap: 16px;
+            }
+
+            .quote {
+                margin: 30px 0;
+                padding-left: 20px;
+            }
+
+            .quote p {
+                font-size: clamp(16px, 4vw, 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .reveal .slides section {
+                padding: 2vh 3vw;
+            }
+
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-badge {
+                font-size: 10px;
+                padding: 6px 16px;
             }
         }
     </style>
@@ -1115,11 +1209,11 @@
             transitionSpeed: 'default',
             backgroundTransition: 'fade',
             center: false,
-            width: 1920,
-            height: 1080,
+            width: '100%',
+            height: '100%',
             margin: 0,
-            minScale: 0.2,
-            maxScale: 2.0,
+            minScale: 1,
+            maxScale: 1,
             controls: true,
             controlsTutorial: true,
             controlsLayout: 'bottom-right',
@@ -1145,7 +1239,8 @@
             mouseWheel: false,
             previewLinks: false,
             hideInactiveCursor: true,
-            hideCursorTime: 3000
+            hideCursorTime: 3000,
+            disableLayout: false
         });
     </script>
 </body>
