@@ -367,14 +367,42 @@
             }
         }
 
-        @media (max-width: 480px) {
+        /* Адаптация для мобильных устройств */
+        @media (max-width: 768px) {
+            /* Слайды открываются сверху, а не по центру */
             .reveal .slides section {
-                padding: 2vh 3vw;
+                padding: 2vh 4vw;
+                justify-content: flex-start !important;
+                padding-top: 8vh;
             }
 
             .hero-badge {
                 font-size: 10px;
                 padding: 6px 16px;
+            }
+
+            /* Адаптация воронки 1-2-3 на слайде Продукт */
+            .reveal .slides section > div[style*="display: flex"][style*="max-width: 1000px"] {
+                flex-direction: column !important;
+                gap: 16px !important;
+                max-width: 100% !important;
+            }
+
+            /* Скрываем стрелки между шагами на мобилке */
+            .reveal .slides section > div[style*="display: flex"] > div[style*="flex-shrink: 0"] {
+                display: none !important;
+            }
+
+            /* Уменьшаем padding в карточках воронки на мобилке */
+            .reveal .slides section > div[style*="display: flex"] > div[style*="flex: 1"] {
+                padding: 16px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .reveal .slides section {
+                padding: 1.5vh 3vw;
+                padding-top: 6vh;
             }
         }
     </style>
