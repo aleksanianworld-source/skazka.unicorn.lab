@@ -782,10 +782,6 @@
                             <p style="font-size: clamp(12px, 1.4vw, 15px); color: var(--text-primary); font-weight: 600; margin-bottom: 4px;">LTV</p>
                             <p style="font-size: clamp(20px, 2.5vw, 26px); font-weight: 900; background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">1,627₽</p>
                         </div>
-                        <div class="card" style="margin-bottom: 10px; padding: 12px;">
-                            <p style="font-size: clamp(12px, 1.4vw, 15px); color: var(--text-primary); font-weight: 600; margin-bottom: 4px;">Прибыль с клиента</p>
-                            <p style="font-size: clamp(20px, 2.5vw, 26px); font-weight: 900; background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">503₽</p>
-                        </div>
                         <div class="card" style="padding: 12px;">
                             <p style="font-size: clamp(12px, 1.4vw, 15px); color: var(--text-primary); font-weight: 600; margin-bottom: 4px;">Повторные покупки</p>
                             <p style="font-size: clamp(20px, 2.5vw, 26px); font-weight: 900; background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">~14%</p>
@@ -1264,7 +1260,7 @@
                     { regex: /^(\d+)\+$/, suffix: '+' },
                     // Проценты в тексте: "92% маржа", "~14%"
                     { regex: /(~?\d+)%/, suffix: '%' },
-                    // Рубли: 1,124₽, 1,627₽, 503₽, 990₽, 3,990₽
+                    // Рубли: 1,124₽, 1,627₽, 990₽, 3,990₽
                     { regex: /^(\d[\d\s,]*)₽$/, suffix: '₽' },
                     // Простые числа: 239, 320,531
                     { regex: /^(\d[\d\s,]*)$/, suffix: '' }
