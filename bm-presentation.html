@@ -754,8 +754,8 @@
                         <p style="font-size: clamp(11px, 1.2vw, 13px); color: var(--text-secondary);">~$3K</p>
                     </div>
                     <div class="card" style="text-align: center; padding: 12px;">
-                        <p style="font-size: clamp(10px, 1.1vw, 12px); color: var(--text-secondary); text-transform: uppercase; margin-bottom: 6px;">Заказов</p>
-                        <p style="font-size: clamp(22px, 2.8vw, 28px); font-weight: 900; color: var(--text-primary); line-height: 1; margin-bottom: 4px;">239</p>
+                        <p style="font-size: clamp(10px, 1.1vw, 12px); color: var(--text-secondary); text-transform: uppercase; margin-bottom: 6px;">Клиентов / Заказов</p>
+                        <p style="font-size: clamp(22px, 2.8vw, 28px); font-weight: 900; color: var(--text-primary); line-height: 1; margin-bottom: 4px;">209 / 239</p>
                         <p style="font-size: clamp(11px, 1.2vw, 13px); color: var(--text-secondary);">за декабрь</p>
                     </div>
                     <div class="card" style="text-align: center; padding: 12px;">
@@ -776,11 +776,15 @@
                         <h3 style="text-align: center; margin-bottom: 10px; font-size: clamp(14px, 1.6vw, 17px);">Ключевые метрики</h3>
                         <div class="card" style="margin-bottom: 10px; padding: 12px;">
                             <p style="font-size: clamp(12px, 1.4vw, 15px); color: var(--text-primary); font-weight: 600; margin-bottom: 4px;">CAC</p>
-                            <p style="font-size: clamp(20px, 2.5vw, 26px); font-weight: 900; background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">984₽</p>
+                            <p style="font-size: clamp(20px, 2.5vw, 26px); font-weight: 900; background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">1,124₽</p>
                         </div>
                         <div class="card" style="margin-bottom: 10px; padding: 12px;">
                             <p style="font-size: clamp(12px, 1.4vw, 15px); color: var(--text-primary); font-weight: 600; margin-bottom: 4px;">LTV</p>
                             <p style="font-size: clamp(20px, 2.5vw, 26px); font-weight: 900; background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">1,627₽</p>
+                        </div>
+                        <div class="card" style="margin-bottom: 10px; padding: 12px;">
+                            <p style="font-size: clamp(12px, 1.4vw, 15px); color: var(--text-primary); font-weight: 600; margin-bottom: 4px;">Прибыль с клиента</p>
+                            <p style="font-size: clamp(20px, 2.5vw, 26px); font-weight: 900; background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">503₽</p>
                         </div>
                         <div class="card" style="padding: 12px;">
                             <p style="font-size: clamp(12px, 1.4vw, 15px); color: var(--text-primary); font-weight: 600; margin-bottom: 4px;">Повторные покупки</p>
@@ -1260,7 +1264,7 @@
                     { regex: /^(\d+)\+$/, suffix: '+' },
                     // Проценты в тексте: "92% маржа", "~14%"
                     { regex: /(~?\d+)%/, suffix: '%' },
-                    // Рубли: 984₽, 1,627₽, 990₽, 3,990₽
+                    // Рубли: 1,124₽, 1,627₽, 503₽, 990₽, 3,990₽
                     { regex: /^(\d[\d\s,]*)₽$/, suffix: '₽' },
                     // Простые числа: 239, 320,531
                     { regex: /^(\d[\d\s,]*)$/, suffix: '' }
